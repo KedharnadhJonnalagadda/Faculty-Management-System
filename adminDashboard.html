@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMS Admin Dashboard</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="adminDashboard.css">
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle">
+    <!--<input type="checkbox" id="sidebar-dash-toggle">
+    <input type="checkbox" id="sidebar-pro-toggle">
+    <input type="checkbox" id="sidebar-sal-toggle">
+    <input type="checkbox" id="sidebar-leav-toggle">
+    <input type="checkbox" id="sidebar-feed-toggle">-->
+    <!--Sidebar Design-->
+    <div class="sidebar">
+        <!--Sidebar title-->
+        <div class="sidebar-title">
+            <h2>FMS</h2>
+        </div>
+        <!--Sidebar menu items-->
+        <div class="sidebar-menu">
+            <ul>
+                <li><a class="dash" href="adminDashboard.html">
+                    <label for="sidebar-dash-toggle"><span class="las la-igloo"></span></label>
+                    <span>Dashboard</span></a>
+                </li>
+                <li><a class="pro" href="">
+                    <label for="sidebar-pro-toggle"><span class="las la-users"></span></label>
+                    <span>Faculty Profiles</span></a>
+                </li>
+                <li><a class="sal" href="">
+                    <label for="sidebar-sal-toggle"><span class="las la-rupee-sign"></span></label>
+                    <span>Faculty Salaries</span></a>
+                </li>
+                <li><a class="leav" href="">
+                    <label for="sidebar-leav-toggle"><span class="las la-paste"></span></label>
+                    <span>Faculty Leaves</span></a>
+                </li>
+                <li><a class="feed" href="">
+                    <label for="sidebar-feed-toggle"><span class="las la-clipboard-list"></span></label>
+                    <span>Faculty Feedbacks</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--Dashboard Design-->
+    <div class="main-content">
+        <!--Header of Dashboard-->
+        <header>
+            <div class="header-title">
+                <!--Menu bar icon and Title-->
+                <h2>
+                    <label for="nav-toggle">
+                        <span class="las la-bars"></span>
+                    </label>
+                    Dashboard
+                </h2>
+            </div>
+                <!--Search bar-->
+                <div class="search-wrapper">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Seach here"/>
+                </div>
+                <!--Admin profile and other settings-->
+                <div class="user-wrapper">
+                    <div class="profiledd" onclick="menuToggle();"><img src="adminProfile.png" width="50px" height="50px" alt=""></div>
+                    <div>
+                        <h3>Harsha Nikkam</h3>
+                        <small>Administrator</small>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><img src="user.png" alt=""><a href="">View Profile</a></li>
+                            <li><img src="edit.png" alt=""><a href="editAdminProfile.html">Edit Profile</a></li>
+                            <li><img src="settings.png" alt=""><a href="">Change password</a></li>
+                            <li><img src="log-out.png" alt=""><a href="">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </header>
+        <!--Main Content of Dashboard-->
+        <main>
+            <!--Dashboard Cards-->
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>50</h1>
+                        <span>Total Faculty</span>
+                    </div>
+                    <div>
+                        <span class="las la-users"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>3</h1>
+                        <span>Faculty on leave</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard-list"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.menu');
+            toggleMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
